@@ -1,0 +1,70 @@
+//
+//  ViewController.swift
+//  SwitchTvEvaluation
+//
+//  Created by Aaron Bonham on 20/11/17.
+//  Copyright © 2017 Aaron Bonham. All rights reserved.
+//
+
+import UIKit
+
+class HomeTableViewController: UITableViewController {
+    private var feed: ContentFeed?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleFeedRefreshed), name: .feedRefreshSuccessful, object: nil)
+        tableView.register(SectionCollectionViewCell.self, forCellReuseIdentifier: "cell")
+        feed = FeedProvider.sharedInstance.feed
+    }
+    
+    @objc func handleFeedRefreshed(notification: Notification) {
+        feed = FeedProvider.sharedInstance.feed
+        tableView.reloadData()
+    }
+}
+
+extension HomeTableViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return feed?.categories.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return feed?.categories[section].category
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SectionCollectionViewCell
+        var orientation: ContentOrientation
+        switch indexPath.section {
+        case 0:
+            orientation = .landscape
+        default:
+            orientation = .portrait
+        }
+        
+        //FIXME: forced optional unwrap
+        cell.configureForSection(orientation: orientation, category: feed!.categories[indexPath.section])
+        return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return ContentOrientation.landscape.size.height
+        default:
+            return ContentOrientation.portrait.size.height
+        }
+    }
+}
