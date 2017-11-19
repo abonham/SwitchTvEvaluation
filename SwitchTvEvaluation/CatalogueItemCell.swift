@@ -37,10 +37,12 @@ class CatalogueItemCell: UICollectionViewCell {
         case .portrait:
             urlString = self.item?.images?.portrait
         }
+        let placehoder = UIImage(named: "darkgray_placeholder")
+        let filter = AspectScaledToFitSizeFilter(size: orientation.size)
         if urlString != nil, let imageUrl = URL(string: urlString!) {
-            thumbnailImageView.af_setImage(withURL: imageUrl, placeholderImage: UIImage(named: "darkgray_placeholder"))
+            thumbnailImageView.af_setImage(withURL: imageUrl, placeholderImage: placehoder, filter: filter)
         } else {
-            thumbnailImageView.image = UIImage(named: "darkgray_placeholder")
+            thumbnailImageView.image = placehoder
         }
         setupView()
     }
