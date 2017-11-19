@@ -14,6 +14,8 @@
 		93EE76841FC21CEE0038501A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EE76831FC21CEE0038501A /* Assets.xcassets */; };
 		93EE768F1FC21CEE0038501A /* SwitchTvEvaluationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE768E1FC21CEE0038501A /* SwitchTvEvaluationTests.swift */; };
 		93EE769A1FC21DFB0038501A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE76991FC21DFB0038501A /* Model.swift */; };
+		93EE769C1FC2256C0038501A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE769B1FC2256C0038501A /* NetworkProvider.swift */; };
+		93EE769E1FC2288C0038501A /* FeedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE769D1FC2288C0038501A /* FeedProvider.swift */; };
 		E3D9AFD83A36621538CB78BF /* Pods_SwitchTvEvaluation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D47737F731827251731CDD5 /* Pods_SwitchTvEvaluation.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		93EE768E1FC21CEE0038501A /* SwitchTvEvaluationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTvEvaluationTests.swift; sourceTree = "<group>"; };
 		93EE76901FC21CEE0038501A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93EE76991FC21DFB0038501A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		93EE769B1FC2256C0038501A /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		93EE769D1FC2288C0038501A /* FeedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProvider.swift; sourceTree = "<group>"; };
 		D064154AD526E0B511CCA25C /* Pods-SwitchTvEvaluationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwitchTvEvaluationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwitchTvEvaluationTests/Pods-SwitchTvEvaluationTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,8 @@
 				93EE76831FC21CEE0038501A /* Assets.xcassets */,
 				93EE76851FC21CEE0038501A /* Info.plist */,
 				93EE76991FC21DFB0038501A /* Model.swift */,
+				93EE769B1FC2256C0038501A /* NetworkProvider.swift */,
+				93EE769D1FC2288C0038501A /* FeedProvider.swift */,
 			);
 			path = SwitchTvEvaluation;
 			sourceTree = "<group>";
@@ -341,6 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93EE769A1FC21DFB0038501A /* Model.swift in Sources */,
+				93EE769E1FC2288C0038501A /* FeedProvider.swift in Sources */,
+				93EE769C1FC2256C0038501A /* NetworkProvider.swift in Sources */,
 				93EE767F1FC21CEE0038501A /* ViewController.swift in Sources */,
 				93EE767D1FC21CEE0038501A /* AppDelegate.swift in Sources */,
 			);
