@@ -38,7 +38,9 @@ class CatalogueItemCell: UICollectionViewCell {
             urlString = self.item?.images?.portrait
         }
         if urlString != nil, let imageUrl = URL(string: urlString!) {
-            thumbnailImageView.af_setImage(withURL: imageUrl)
+            thumbnailImageView.af_setImage(withURL: imageUrl, placeholderImage: UIImage(named: "darkgray_placeholder"))
+        } else {
+            thumbnailImageView.image = UIImage(named: "darkgray_placeholder")
         }
         setupView()
     }

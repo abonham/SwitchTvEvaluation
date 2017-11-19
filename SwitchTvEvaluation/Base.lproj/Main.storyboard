@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CsR-GJ-YjG">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhX-h0-zSZ">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -21,10 +21,29 @@
                             <outlet property="delegate" destination="CsR-GJ-YjG" id="ArL-cX-cri"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="OaD-tF-ehN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTu-12-Jop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154" y="425"/>
+            <point key="canvasLocation" x="366" y="425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pAS-ay-tar">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zhX-h0-zSZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i4y-WX-7VT">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CsR-GJ-YjG" kind="relationship" relationship="rootViewController" id="R3x-Z2-gqj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ic7-oZ-T8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2739" y="425"/>
         </scene>
     </scenes>
 </document>

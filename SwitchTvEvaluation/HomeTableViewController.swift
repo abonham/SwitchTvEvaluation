@@ -18,12 +18,14 @@ class HomeTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleFeedRefreshed), name: .feedRefreshSuccessful, object: nil)
         tableView.register(SectionCollectionViewCell.self, forCellReuseIdentifier: reuseID)
         feed = FeedProvider.sharedInstance.feed
+        title = "Switch Media"
     }
     
     @objc func handleFeedRefreshed(notification: Notification) {
         feed = FeedProvider.sharedInstance.feed
         tableView.reloadData()
     }
+
 }
 
 extension HomeTableViewController {
@@ -57,7 +59,7 @@ extension HomeTableViewController {
         }
         
         //FIXME: forced optional unwrap
-        cell.configureForSection(orientation: orientation, category: feed!.categories[indexPath.section])
+        cell.configureForSection(orientation: orientation, category: feed!.categories[indexPath.section], delegate: self)
         return cell
         
     }
@@ -73,5 +75,13 @@ extension HomeTableViewController {
         default:
             return ContentOrientation.portrait.size.height
         }
+    }
+}
+
+extension HomeTableViewController: SectionCellDelegate {
+    func didSelect(item: ContentItem) {
+        let detailViewController = ItemDetailViewController()
+        detailViewController.configure(for: item)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

@@ -21,7 +21,12 @@ enum ContentOrientation {
     }
 }
 
-class SectionCollectionViewCell: UITableViewCell, UICollectionViewDelegate {
+protocol SectionCellDelegate {
+    func didSelect(item: ContentItem)
+}
+
+class SectionCollectionViewCell: UITableViewCell {
+    var delegate: SectionCellDelegate?
     
     fileprivate let reuseID = "collectionCell"
     fileprivate var orientation = ContentOrientation.landscape
@@ -55,7 +60,8 @@ class SectionCollectionViewCell: UITableViewCell, UICollectionViewDelegate {
         setupView(orientation: nil)
     }
     
-    func configureForSection(orientation: ContentOrientation, category: ContentCategory) {
+    func configureForSection(orientation: ContentOrientation, category: ContentCategory, delegate: SectionCellDelegate) {
+        self.delegate = delegate
         self.category = category
         self.orientation = orientation
         setupView(orientation: orientation)
@@ -82,6 +88,12 @@ extension SectionCollectionViewCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseID, for: indexPath) as! CatalogueItemCell
         cell.configureCell(for: category?.items?[indexPath.item], orientation: orientation)
         return cell
+    }
+}
+
+extension SectionCollectionViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelect(item: category!.items![indexPath.item])
     }
 }
 
