@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeTableViewController.swift
 //  SwitchTvEvaluation
 //
 //  Created by Aaron Bonham on 20/11/17.
@@ -9,12 +9,14 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+    fileprivate let reuseID = "cell"
     private var feed: ContentFeed?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleFeedRefreshed), name: .feedRefreshSuccessful, object: nil)
-        tableView.register(SectionCollectionViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SectionCollectionViewCell.self, forCellReuseIdentifier: reuseID)
         feed = FeedProvider.sharedInstance.feed
     }
     
@@ -38,9 +40,14 @@ extension HomeTableViewController {
         return feed?.categories[section].category
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        if let header = view as? UITableViewHeaderFooterView {
+            header.textLabel?.textColor = .lightGray
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SectionCollectionViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as! SectionCollectionViewCell
         var orientation: ContentOrientation
         switch indexPath.section {
         case 0:
