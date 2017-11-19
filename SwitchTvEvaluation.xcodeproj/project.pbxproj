@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93EE767D1FC21CEE0038501A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE767C1FC21CEE0038501A /* AppDelegate.swift */; };
+		93EE767F1FC21CEE0038501A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE767E1FC21CEE0038501A /* ViewController.swift */; };
+		93EE76821FC21CEE0038501A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EE76801FC21CEE0038501A /* Main.storyboard */; };
+		93EE76841FC21CEE0038501A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EE76831FC21CEE0038501A /* Assets.xcassets */; };
+		93EE768F1FC21CEE0038501A /* SwitchTvEvaluationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE768E1FC21CEE0038501A /* SwitchTvEvaluationTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93EE768B1FC21CEE0038501A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93EE76711FC21CEE0038501A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93EE76781FC21CEE0038501A;
+			remoteInfo = SwitchTvEvaluation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93EE76791FC21CEE0038501A /* SwitchTvEvaluation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchTvEvaluation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EE767C1FC21CEE0038501A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93EE767E1FC21CEE0038501A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93EE76811FC21CEE0038501A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93EE76831FC21CEE0038501A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93EE76851FC21CEE0038501A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93EE768A1FC21CEE0038501A /* SwitchTvEvaluationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwitchTvEvaluationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EE768E1FC21CEE0038501A /* SwitchTvEvaluationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTvEvaluationTests.swift; sourceTree = "<group>"; };
+		93EE76901FC21CEE0038501A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93EE76761FC21CEE0038501A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EE76871FC21CEE0038501A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93EE76701FC21CEE0038501A = {
+			isa = PBXGroup;
+			children = (
+				93EE767B1FC21CEE0038501A /* SwitchTvEvaluation */,
+				93EE768D1FC21CEE0038501A /* SwitchTvEvaluationTests */,
+				93EE767A1FC21CEE0038501A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93EE767A1FC21CEE0038501A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93EE76791FC21CEE0038501A /* SwitchTvEvaluation.app */,
+				93EE768A1FC21CEE0038501A /* SwitchTvEvaluationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93EE767B1FC21CEE0038501A /* SwitchTvEvaluation */ = {
+			isa = PBXGroup;
+			children = (
+				93EE767C1FC21CEE0038501A /* AppDelegate.swift */,
+				93EE767E1FC21CEE0038501A /* ViewController.swift */,
+				93EE76801FC21CEE0038501A /* Main.storyboard */,
+				93EE76831FC21CEE0038501A /* Assets.xcassets */,
+				93EE76851FC21CEE0038501A /* Info.plist */,
+			);
+			path = SwitchTvEvaluation;
+			sourceTree = "<group>";
+		};
+		93EE768D1FC21CEE0038501A /* SwitchTvEvaluationTests */ = {
+			isa = PBXGroup;
+			children = (
+				93EE768E1FC21CEE0038501A /* SwitchTvEvaluationTests.swift */,
+				93EE76901FC21CEE0038501A /* Info.plist */,
+			);
+			path = SwitchTvEvaluationTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93EE76781FC21CEE0038501A /* SwitchTvEvaluation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EE76931FC21CEE0038501A /* Build configuration list for PBXNativeTarget "SwitchTvEvaluation" */;
+			buildPhases = (
+				93EE76751FC21CEE0038501A /* Sources */,
+				93EE76761FC21CEE0038501A /* Frameworks */,
+				93EE76771FC21CEE0038501A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwitchTvEvaluation;
+			productName = SwitchTvEvaluation;
+			productReference = 93EE76791FC21CEE0038501A /* SwitchTvEvaluation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93EE76891FC21CEE0038501A /* SwitchTvEvaluationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EE76961FC21CEE0038501A /* Build configuration list for PBXNativeTarget "SwitchTvEvaluationTests" */;
+			buildPhases = (
+				93EE76861FC21CEE0038501A /* Sources */,
+				93EE76871FC21CEE0038501A /* Frameworks */,
+				93EE76881FC21CEE0038501A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93EE768C1FC21CEE0038501A /* PBXTargetDependency */,
+			);
+			name = SwitchTvEvaluationTests;
+			productName = SwitchTvEvaluationTests;
+			productReference = 93EE768A1FC21CEE0038501A /* SwitchTvEvaluationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93EE76711FC21CEE0038501A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Aaron Bonham";
+				TargetAttributes = {
+					93EE76781FC21CEE0038501A = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					93EE76891FC21CEE0038501A = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 93EE76781FC21CEE0038501A;
+					};
+				};
+			};
+			buildConfigurationList = 93EE76741FC21CEE0038501A /* Build configuration list for PBXProject "SwitchTvEvaluation" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93EE76701FC21CEE0038501A;
+			productRefGroup = 93EE767A1FC21CEE0038501A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93EE76781FC21CEE0038501A /* SwitchTvEvaluation */,
+				93EE76891FC21CEE0038501A /* SwitchTvEvaluationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93EE76771FC21CEE0038501A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EE76841FC21CEE0038501A /* Assets.xcassets in Resources */,
+				93EE76821FC21CEE0038501A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EE76881FC21CEE0038501A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93EE76751FC21CEE0038501A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EE767F1FC21CEE0038501A /* ViewController.swift in Sources */,
+				93EE767D1FC21CEE0038501A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EE76861FC21CEE0038501A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EE768F1FC21CEE0038501A /* SwitchTvEvaluationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93EE768C1FC21CEE0038501A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93EE76781FC21CEE0038501A /* SwitchTvEvaluation */;
+			targetProxy = 93EE768B1FC21CEE0038501A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		93EE76801FC21CEE0038501A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93EE76811FC21CEE0038501A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93EE76911FC21CEE0038501A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		93EE76921FC21CEE0038501A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93EE76941FC21CEE0038501A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y9K9YMVZS9;
+				INFOPLIST_FILE = SwitchTvEvaluation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.SwitchTvEvaluation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		93EE76951FC21CEE0038501A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y9K9YMVZS9;
+				INFOPLIST_FILE = SwitchTvEvaluation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.SwitchTvEvaluation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		93EE76971FC21CEE0038501A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y9K9YMVZS9;
+				INFOPLIST_FILE = SwitchTvEvaluationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.SwitchTvEvaluationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwitchTvEvaluation.app/SwitchTvEvaluation";
+			};
+			name = Debug;
+		};
+		93EE76981FC21CEE0038501A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y9K9YMVZS9;
+				INFOPLIST_FILE = SwitchTvEvaluationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.SwitchTvEvaluationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwitchTvEvaluation.app/SwitchTvEvaluation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93EE76741FC21CEE0038501A /* Build configuration list for PBXProject "SwitchTvEvaluation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EE76911FC21CEE0038501A /* Debug */,
+				93EE76921FC21CEE0038501A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93EE76931FC21CEE0038501A /* Build configuration list for PBXNativeTarget "SwitchTvEvaluation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EE76941FC21CEE0038501A /* Debug */,
+				93EE76951FC21CEE0038501A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93EE76961FC21CEE0038501A /* Build configuration list for PBXNativeTarget "SwitchTvEvaluationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EE76971FC21CEE0038501A /* Debug */,
+				93EE76981FC21CEE0038501A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93EE76711FC21CEE0038501A /* Project object */;
+}
