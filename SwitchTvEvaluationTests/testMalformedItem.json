@@ -1,0 +1,9 @@
+{
+    
+ "title": "Wonder Woman",
+    "description": "Wonder Woman is a 2017 American superhero film based on the DC Comics character of the same name.",
+    "images": {
+        "portrait": "https://image.tmdb.org/t/p/w640/gfJGlDaHuWimErCr5Ql0I8x9QSy.jpg",
+        "landscape": "https://image.tmdb.org/t/p/original/hA5oCgvgCxj5MEWcLpjXXTwEANF.jpg"
+    }
+}

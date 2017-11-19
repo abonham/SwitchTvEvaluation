@@ -20,6 +20,8 @@
 		93EE76A21FC22DBC0038501A /* CatalogueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE76A11FC22DBC0038501A /* CatalogueItemCell.swift */; };
 		93EE76A41FC2311F0038501A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE76A31FC2311F0038501A /* ItemDetailViewController.swift */; };
 		93EE76A61FC239550038501A /* darkgray_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 93EE76A51FC239550038501A /* darkgray_placeholder.png */; };
+		93EE76A81FC23C6F0038501A /* testWellFormedFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 93EE76A71FC23C6F0038501A /* testWellFormedFeed.json */; };
+		93EE76AA1FC23EC90038501A /* testMalformedItem.json in Resources */ = {isa = PBXBuildFile; fileRef = 93EE76A91FC23EC90038501A /* testMalformedItem.json */; };
 		E3D9AFD83A36621538CB78BF /* Pods_SwitchTvEvaluation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D47737F731827251731CDD5 /* Pods_SwitchTvEvaluation.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		93EE76A11FC22DBC0038501A /* CatalogueItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCell.swift; sourceTree = "<group>"; };
 		93EE76A31FC2311F0038501A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		93EE76A51FC239550038501A /* darkgray_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkgray_placeholder.png; sourceTree = "<group>"; };
+		93EE76A71FC23C6F0038501A /* testWellFormedFeed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testWellFormedFeed.json; sourceTree = "<group>"; };
+		93EE76A91FC23EC90038501A /* testMalformedItem.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testMalformedItem.json; sourceTree = "<group>"; };
 		D064154AD526E0B511CCA25C /* Pods-SwitchTvEvaluationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwitchTvEvaluationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwitchTvEvaluationTests/Pods-SwitchTvEvaluationTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +137,8 @@
 			children = (
 				93EE768E1FC21CEE0038501A /* SwitchTvEvaluationTests.swift */,
 				93EE76901FC21CEE0038501A /* Info.plist */,
+				93EE76A71FC23C6F0038501A /* testWellFormedFeed.json */,
+				93EE76A91FC23EC90038501A /* testMalformedItem.json */,
 			);
 			path = SwitchTvEvaluationTests;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EE76AA1FC23EC90038501A /* testMalformedItem.json in Resources */,
+				93EE76A81FC23C6F0038501A /* testWellFormedFeed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
