@@ -17,11 +17,12 @@ class CatalogueItemCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupView()
     }
     
     func configureCell(for item: ContentItem?, orientation: ContentOrientation) {
@@ -30,49 +31,41 @@ class CatalogueItemCell: UICollectionViewCell {
         thumbnailImageView.image = nil
         titleLabel.text = self.item?.title
         titleLabel.textColor = .white
-        var urlString: String?
-        switch orientation {
-        case .landscape:
-            urlString = self.item?.images?.landscape
-        case .portrait:
-            urlString = self.item?.images?.portrait
-        }
+        
         let placehoder = UIImage(named: "darkgray_placeholder")
         let filter = AspectScaledToFitSizeFilter(size: orientation.size)
-        if urlString != nil, let imageUrl = URL(string: urlString!) {
+        
+        if let imageUrl = self.item?.images?.imageUrl(for: self.orientation) {
             thumbnailImageView.af_setImage(withURL: imageUrl, placeholderImage: placehoder, filter: filter)
         } else {
             thumbnailImageView.image = placehoder
         }
-        setupView()
-    }
-    
-    func setupView() {
+        
+        // removing views from super is used to clear existing constraints
         thumbnailImageView.removeFromSuperview()
         titleLabel.removeFromSuperview()
-        thumbnailImageView.adjustsImageWhenAncestorFocused = true
-        thumbnailImageView.contentMode = .scaleAspectFit
-        thumbnailImageView.backgroundColor = .lightGray
-        titleLabel.lineBreakMode = .byTruncatingTail
-        contentView.addSubview(thumbnailImageView)
-        contentView.addSubview(titleLabel)
+        
         setupConstraints()
     }
     
+    func setupView() {
+        thumbnailImageView.adjustsImageWhenAncestorFocused = true
+        thumbnailImageView.contentMode = .scaleAspectFit
+        titleLabel.lineBreakMode = .byTruncatingTail
+        
+    }
+    
     func setupConstraints() {
-        var horizontalInset: CGFloat
-        var verticalInset: CGFloat
-        switch orientation {
-        case .landscape:
-            horizontalInset = 16
-            verticalInset = 8
-        case .portrait:
-            horizontalInset = 8
-            verticalInset = 32
-        }
+        contentView.addSubview(thumbnailImageView)
+        contentView.addSubview(titleLabel)
+
+        let horizontalInset = orientation.cellInsets.x
+        let verticalInset = orientation.cellInsets.y
         thumbnailImageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         let margins = layoutMarginsGuide
+        
         margins.bottomAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
