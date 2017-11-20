@@ -13,10 +13,9 @@ class FeedProvider {
     
     private var jsonData: Data? {
         didSet {
-            
+
             // Using the Array<ContentCategory> decoder since the JSON array doesn't have a
             // name to use with CodingKeys of ContentFeed
- 
             if let feedArray = try? JSONDecoder().decode(Array<ContentCategory>.self, from: jsonData!) {
                 
                 // Feed currently has movies first, if featured should be first, api needs display order
@@ -36,7 +35,6 @@ class FeedProvider {
     
     @objc func handleDataRefresh(notification: Notification) {
         if let data = notification.userInfo?[NetworkProdiverKey.newData] as? Data {
-            print(data)
             jsonData = data
         }
     }
