@@ -46,7 +46,7 @@ class ItemDetailViewController: UIViewController {
     }
     
     func setupConstraints() {
-        let previewSize = ContentOrientation.landscape.size
+        let previewSize = ContentOrientation.portrait.size
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         previewImageView.translatesAutoresizingMaskIntoConstraints = false
