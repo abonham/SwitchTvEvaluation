@@ -33,13 +33,13 @@ class CatalogueItemCell: UICollectionViewCell {
         titleLabel.text = self.item?.title
         titleLabel.textColor = .white
         
-        let placehoder = UIImage(named: "darkgray_placeholder")
+        let placeholder = UIImage(named: "darkgray_placeholder")
         let filter = AspectScaledToFitSizeFilter(size: orientation.size)
         
         if let imageUrl = self.item?.images?.imageUrl(for: self.orientation) {
-            thumbnailImageView.af_setImage(withURL: imageUrl, placeholderImage: placehoder, filter: filter)
+            thumbnailImageView.af_setImage(withURL: imageUrl, placeholderImage: placeholder, filter: filter)
         } else {
-            thumbnailImageView.image = placehoder
+            thumbnailImageView.image = placeholder
         }
         
         /*
