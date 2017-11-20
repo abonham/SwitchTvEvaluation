@@ -13,6 +13,22 @@ struct PreviewImage: Codable {
     var landscape: String?
 }
 
+extension PreviewImage {
+    func imageUrl(for orientation: ContentOrientation) -> URL? {
+        switch orientation {
+        case .landscape:
+            if let urlString = landscape {
+                return URL(string: urlString)
+            }
+        case .portrait:
+            if let urlString = portrait {
+                return URL(string: urlString)
+            }
+        }
+        return nil
+    }
+}
+
 struct ContentItem: Codable {
     var title: String?
     var year: Int?
