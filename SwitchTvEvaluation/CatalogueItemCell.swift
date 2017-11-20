@@ -28,6 +28,7 @@ class CatalogueItemCell: UICollectionViewCell {
     func configureCell(for item: ContentItem?, orientation: ContentOrientation) {
         if item != nil { self.item = item }
         self.orientation = orientation
+        
         thumbnailImageView.image = nil
         titleLabel.text = self.item?.title
         titleLabel.textColor = .white
@@ -41,7 +42,10 @@ class CatalogueItemCell: UICollectionViewCell {
             thumbnailImageView.image = placehoder
         }
         
-        // removing views from super is used to clear existing constraints
+        /*
+         Removing views from super is used to clear existing constraints
+         Constraints are cleared to ensure no layout issues when a cell is reused
+        */
         thumbnailImageView.removeFromSuperview()
         titleLabel.removeFromSuperview()
         

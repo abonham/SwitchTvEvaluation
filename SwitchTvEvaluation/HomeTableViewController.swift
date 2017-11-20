@@ -14,11 +14,15 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .black
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleFeedRefreshed), name: .feedRefreshSuccessful, object: nil)
-        tableView.register(SectionCollectionViewCell.self, forCellReuseIdentifier: reuseID)
-        feed = FeedProvider.sharedInstance.feed
         title = "Switch Media"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleFeedRefreshed), name: .feedRefreshSuccessful, object: nil)
+        
+        tableView.register(SectionCollectionViewCell.self, forCellReuseIdentifier: reuseID)
+        
+        feed = FeedProvider.sharedInstance.feed
     }
     
     @objc func handleFeedRefreshed(notification: Notification) {
@@ -50,7 +54,9 @@ extension HomeTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as! SectionCollectionViewCell
+        
         var orientation: ContentOrientation
+        
         switch indexPath.section {
         case 0:
             orientation = .landscape
@@ -58,8 +64,10 @@ extension HomeTableViewController {
             orientation = .portrait
         }
         
-        //FIXME: forced optional unwrap
-        cell.configureForSection(orientation: orientation, category: feed!.categories[indexPath.section], delegate: self)
+        if let category = feed?.categories[indexPath.section]
+        {
+            cell.configureForSection(orientation: orientation, category: category, delegate: self)
+        }
         return cell
         
     }

@@ -22,15 +22,10 @@ enum NetworkProdiverKey: String {
 
 class NetworkProvider {
     static let sharedInstance = NetworkProvider()
-    
     let apiUrl = "https://pastebin.com/raw/8LiEHfwU"
     
     private init() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshFeed), name: .requestFeedRefresh, object: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func refreshFeed() {
