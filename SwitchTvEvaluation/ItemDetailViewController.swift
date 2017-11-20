@@ -46,6 +46,7 @@ class ItemDetailViewController: UIViewController {
     }
     
     func setupConstraints() {
+        let previewSize = ContentOrientation.landscape.size
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         previewImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,20 +69,9 @@ class ItemDetailViewController: UIViewController {
         bannerImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         previewImageView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         previewImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -16).isActive = true
-        previewImageView.heightAnchor.constraint(equalToConstant: 480).isActive = true
-        previewImageView.widthAnchor.constraint(equalToConstant: 270).isActive = true
+        previewImageView.heightAnchor.constraint(equalToConstant: previewSize.height).isActive = true
+        previewImageView.widthAnchor.constraint(equalToConstant: previewSize.width).isActive = true
         view.setNeedsUpdateConstraints()
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
