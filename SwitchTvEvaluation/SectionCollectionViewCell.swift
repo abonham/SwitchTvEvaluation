@@ -19,6 +19,15 @@ enum ContentOrientation {
             return CGSize(width: 480, height: 270)
         }
     }
+    
+    var cellInsets: CGPoint {
+        switch self {
+        case  .landscape:
+            return CGPoint(x: 16, y: 8)
+        case .portrait:
+            return CGPoint(x: 8, y: 32)
+        }
+    }
 }
 
 protocol SectionCellDelegate {
